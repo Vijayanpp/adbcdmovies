@@ -13,6 +13,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { PopularSeriesComponent } from './popular-series/popular-series.component';
 import { SerieComponent } from './serie/serie.component';
 import { ActorComponent } from './actor/actor.component';
+import { MalayalamComponent } from './malayalam/malayalam.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ActorComponent } from './actor/actor.component';
     UpcomingComponent,
     PopularSeriesComponent,
     SerieComponent,
-    ActorComponent
+    ActorComponent,
+    MalayalamComponent
   ],
   imports: [
     BrowserModule,

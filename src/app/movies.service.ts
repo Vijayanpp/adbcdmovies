@@ -8,7 +8,7 @@ export class MoviesService {
 
   constructor(private _jsonp: Jsonp) {
     this.apikey = 'fed69657ba4cc6e1078d2a6a95f51c8c';
-    console.log('Movies service is ready');
+    console.log('ADBCD Movies is ready');
   }
 
   getPopular() {
