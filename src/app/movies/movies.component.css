@@ -1,3 +1,9 @@
 .text-ellipsis {
     text-overflow: ellipsis;
 }
+.red
+{
+	background: #f31d12;
+	border:none;
+}
+

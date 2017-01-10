@@ -1,25 +1,89 @@
-<nav class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-        aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" routerLink="/">Movies Finder</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/upcoming">Upcoming Movies</a></li>
-        <li routerLinkActive="active"><a routerLink="popular/series">Popular Series</a></li>
-      </ul>
-    </div>
-    <!-- /.nav-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+<div class="slideMenuClose"></div>
+
+    <section class="preloader preloader2 row">
+        <div class="before_half row m0"></div>
+        <div class="after_half row m0"></div>
+        <div class="row m0 content">            
+            <div class="circle">
+                <div class="red">
+                    <div class="rotator">
+                        <img src="assets/images/curve.png" alt="">
+                    </div>
+                    <a href="#" class="logo">ADBCD</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <header class="row header1" id="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <div class="logo_container fleft">
+                        <div id="slideMenu_trigger">
+                            <img src="assets/images/navigation/logo/bars.png" alt="">
+                        </div>                        
+                        <a class="navbar-brand" href="index.html" title="ADBCD  - World of Entertainment">ADBCD</a>
+                    </div>                    
+                </div>
+                
+                <div class="follow_nav fleft">
+                    <div class="fleft menuTitle">Follow Us:</div>
+                    <ul class="nav nav-pills">
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="rightSide_nav pull-right">
+                    <div class="fleft current_date"></div>
+                    <div class="fright search_dot">
+                        <ul class="nav navbar-nav">
+                            <li><a href="search-form.html" id="search_form"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#" id="scrollSpyTrigger"><img src="assets/images/navigation/dot.png" alt=""></a></li>
+                        </ul>
+                    </div>                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div id="top_nav" class="collapse navbar-collapse fleft">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a href="#">Movies</a>
+                                <!--<ul class="nav">
+                                    <li><a href="index2.html">Home 2</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="elements.html">Elements</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                    <li><a href="font-awesome-cheatsheet.html">Font Awesome</a></li>
+                                    <li><a href="header-styles.html">Header Styles</a></li>
+                                    <li><a href="single-blog.html">Single Blog</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                </ul>-->
+                            </li>
+                            <li routerLinkActive="active"><a routerLink="/upcoming">Upcoming Movies</a></li>
+                            <li routerLinkActive="active"><a routerLink="popular/series">Popular Series</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" class="subscribe_popup">Subscribe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+
+
+
 <!-- /.navbar -->
 <!--<div class="container">
   <div class="section">
@@ -33,7 +97,7 @@
         <a routerLink="/genres/{{genre.id}}/{{genre.name}}" routerLinkActive="active" class="list-group-item" *ngFor="let genre of genres">{{genre.name}}</a>
       </div>
     </div>-->
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".movies-cat">
@@ -43,7 +107,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse movies-cat">
-          <div class="panel-heading">Movies Category</div>
+          <div class="panel-heading">Game is on</div>
           <ul class="nav nav-stacked">
             <a routerLink="/genres/{{genre.id}}/{{genre.name}}" routerLinkActive="active" class="list-group-item" *ngFor="let genre of genres">{{genre.name}}</a>
           </ul>
@@ -53,15 +117,136 @@
     </div>
     <!--/end left column-->
     <!--/.sidebar-offcanvas-->
-    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
       <router-outlet></router-outlet>
     </div>
     <!--/.col-xs-12.col-sm-9-->
   </div>
   <!--/row-->
   <hr>
-  <footer>
-    <p>&copy; 2016 Company, Inc.</p>
-  </footer>
+ 
 </div>
 <!--/.container-->
+
+
+<!--*****************************************************************************************************************-->
+    <!--Copyright Here-->
+    <section class="row copyright-row">
+        <a href="index.html" class="logo fleft">ADBCD MOVIES</a>
+        <div class="follow_nav fleft">
+            <div class="fleft menuTitle">Follow Us:</div>
+            <ul class="nav nav-pills">
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+        </div>
+        <div class="rights fright">2017 &copy; All Rights Reserved by <a href="www.adbcd.com">ADBCD Entertainment House</a></div>
+    </section>
+    <!--Copyright Here-->
+<!--*****************************************************************************************************************-->
+
+<!--*****************************************************************************************************************-->    
+    <!--Sliding Menu Triggered with Menu-->
+    <div class="sliding_menu row m0">
+        <div class="row m0 search_row">
+            <form action="#" class="search_form fleft">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="search" class="form-control">
+                </div>                
+            </form>
+            <div class="fleft" id="menuHide"><img src="assets/images/navigation/logo/bars2.png" alt=""></div>
+        </div>
+        <div class="row m0 navByCat">
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hollywood</a>
+                    
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mollywood</a>
+                    
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bollywood</a>
+                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kollywood</a>
+                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tollywood</a>
+                 </li>
+            </ul>
+        </div>
+       
+        
+        
+       
+        <div class="row m0 social_media_followers">
+            <ul class="nav">
+                <li>
+                    <div class="media google-plus">
+                        <div class="media-left media-middle">
+                            <i class="fa fa-google-plus"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>1189k</h4>
+                            <a href="#">Follow</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media twitter">
+                        <div class="media-left media-middle">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>1168k</h4>
+                            <a href="#">Follow</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media facebook">
+                        <div class="media-left media-middle">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>4210k</h4>
+                            <a href="#">Follow</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="media youtube">
+                        <div class="media-left media-middle">
+                            <i class="fa fa-youtube-play"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4>2148k</h4>
+                            <a href="#">Follow</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row m0 instafeed">
+            <h3 class="widgetTitle">Instagram Feed</h3>
+            <ul class="nav" id="instafeed"></ul>
+        </div>
+        <div class="row m0 popular_tags">
+            <h3 class="widgetTitle">popular tags</h3>
+            <a href="#" class="tag">Business</a>
+            <a href="#" class="tag">Technology</a>
+            <a href="#" class="tag">Photography</a>
+            <a href="#" class="tag">Electronics</a>
+            <a href="#" class="tag">Entertainment</a>
+            <a href="#" class="tag">Fashion</a>
+            <a href="#" class="tag">Education</a>
+            <a href="#" class="tag">Places</a>
+        </div>
+    </div>
+    <!--Sliding Menu Triggered with Menu End-->
