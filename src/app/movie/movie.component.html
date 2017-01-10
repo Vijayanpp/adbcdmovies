@@ -29,6 +29,8 @@
   </div>
 </div>
 <!--Trailer-->
+<div class='gap'>
+</div>
 
 <div class="row is-flex" *ngIf="cast && cast.length > 0">
       <div class="col-md-12">
@@ -44,6 +46,9 @@
       </div>
     </div>
 
+    <div class="gap">
+    </div>
+
 <div class="row" *ngIf="video">
   <div class="col-md-8 col-md-offset-2">
     <h2>{{video.name}}</h2>
@@ -53,7 +58,10 @@
   </div>
 </div>
 <!--Trailer-->
+<div class='gap'>
+</div>
 <!--Similar Movies-->
+
 <div class="row is-flex" *ngIf="similarMovies && similarMovies.length > 0">
   <div class="col-md-12">
     <h2>Similar Movies</h2>
@@ -63,9 +71,4 @@
   </div>
 </div>
 <!--Similar Movies-->
-<div class="row" *ngIf="reviews && reviews.length > 0">
-  <div class="col-md-12">
-    <h2>Reviews</h2>
-  </div>
-  
-</div>
+

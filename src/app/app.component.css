@@ -13,3 +13,7 @@
     background-color: #000;
     border-color: #000;
 }
+.navbar-header a
+{
+	color:#fff!important;
+}

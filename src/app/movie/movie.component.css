@@ -27,3 +27,13 @@ a:hover
 {
 	color:#f31d12;
 }
+.gap
+{
+	width:100%;
+	height:60px;
+	}
+
+.label-info[href]:hover, .label-info[href]:focus,.label-info[href] {
+    background-color: #f31d12!important;
+    color:#fff!important;
+}
