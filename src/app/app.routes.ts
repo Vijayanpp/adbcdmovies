@@ -6,6 +6,10 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { PopularSeriesComponent } from './popular-series/popular-series.component';
 import { SerieComponent } from './serie/serie.component';
 import { ActorComponent } from './actor/actor.component';
+import { MalayalamComponent } from './malayalam/malayalam.component';
+import { BollywoodComponent } from './bollywood/bollywood.component';
+import { TollywoodComponent } from './tollywood/tollywood.component';
+import { KollywoodComponent } from './kollywood/kollywood.component';
 
 export const appRoutes: Routes = [
     {path: '', component: MoviesComponent},
@@ -15,4 +19,8 @@ export const appRoutes: Routes = [
     {path: 'genres/:id/:name', component: GenresComponent},
     {path: 'upcoming', component: UpcomingComponent},
     {path: 'popular/series', component: PopularSeriesComponent},
+    {path: 'malayalam', component:  MalayalamComponent},
+    {path: 'bollywood', component:  BollywoodComponent},
+    {path: 'tollywood', component:  TollywoodComponent},
+    {path: 'kollywood', component:  KollywoodComponent},
 ];

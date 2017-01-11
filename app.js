@@ -1,6 +1,6 @@
 var express = require('express');
-// var jsonfile = require('jsonfile');
-// var entertainment=require('./server/ent.js');
+var jsonfile = require('jsonfile');
+var entertainment=require('./server/ent.js');
 // var news=require('./server/news.js');
 // var business=require('./server/business.js');
 // var fashion=require('./server/fashion.js');
@@ -9,7 +9,7 @@ var express = require('express');
 // var quotes= require('./server/quotes.js');
 // var technology=require('./server/Technology.js');
 // -----------------------------------------------------------------
-// var entjson='./server/json/entertainment.json';
+ var entjson='./server/json/entertainment.json';
 // var newsjson='./server/json/news.json'
 // var businessjson='./server/json/business.json'
 // var fashionjson='./server/json/fashion.json'
@@ -17,15 +17,9 @@ var express = require('express');
 // var moviejson='./server/json/movie.json'
 // var quotesjson='./server/json/quotes.json'
 // var technologyjson='./server/json/technology.json'
-
 var app = express();
-
-
-
 app.set('port', (process.env.PORT || 5000));
-
 app.use(express.static(__dirname + '/dist'));
-
 
 app.get('/', function(request, response) {
   response.render('index.html');
@@ -33,11 +27,11 @@ app.get('/', function(request, response) {
 
 
 
-// app.get('/mainnews', function(request, response) {
-//  jsonfile.readFile(entjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
+app.get('/mainnews', function(request, response) {
+ jsonfile.readFile(entjson, function(err, obj) {
+ response.send(obj)
+ })
+ })
 
 // app.get('/entertainment', function(request, response) {
 //  jsonfile.readFile(entjson, function(err, obj) {

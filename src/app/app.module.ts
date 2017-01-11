@@ -14,6 +14,10 @@ import { PopularSeriesComponent } from './popular-series/popular-series.componen
 import { SerieComponent } from './serie/serie.component';
 import { ActorComponent } from './actor/actor.component';
 import { MalayalamComponent } from './malayalam/malayalam.component';
+import { KollywoodComponent } from './kollywood/kollywood.component';
+import { TollywoodComponent } from './tollywood/tollywood.component';
+import { BollywoodComponent } from './bollywood/bollywood.component';
+import { HollywoodComponent } from './hollywood/hollywood.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { MalayalamComponent } from './malayalam/malayalam.component';
     PopularSeriesComponent,
     SerieComponent,
     ActorComponent,
-    MalayalamComponent
+    MalayalamComponent,
+    KollywoodComponent,
+    TollywoodComponent,
+    BollywoodComponent,
+    HollywoodComponent
   ],
   imports: [
     BrowserModule,

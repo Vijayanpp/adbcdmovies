@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MoviesService} from '../movies.service';
 
 @Component({
   selector: 'app-malayalam',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./malayalam.component.css']
 })
 export class MalayalamComponent implements OnInit {
+  public movies: Array<Object>;
 
-  constructor() { }
+  constructor(public moviservice:MoviesService) { }
 
   ngOnInit() {
+    this.moviservice.getUpComingMovies().subscribe(res=>{
+      this.movies=res.results;     
+    })
   }
 
 }

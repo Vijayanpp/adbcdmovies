@@ -1,14 +1,23 @@
 import { Injectable } from '@angular/core';
-import {Jsonp, URLSearchParams} from '@angular/http';
+import {Jsonp, URLSearchParams,Http} from '@angular/http';
 import 'rxjs/Rx';
 
 @Injectable()
 export class MoviesService {
   apikey: string;
 
-  constructor(private _jsonp: Jsonp) {
+  constructor(private _jsonp: Jsonp,public _http:Http) {
     this.apikey = 'fed69657ba4cc6e1078d2a6a95f51c8c';
     console.log('ADBCD Movies is ready');
+  }
+
+  getMovies(url)
+  {
+     return this._http.get(url)
+      .map(res => {
+        return res.json();
+      })
+
   }
 
   getPopular() {
