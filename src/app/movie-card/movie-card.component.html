@@ -1,7 +1,8 @@
 <a routerLink="/movie/{{movie.id}}">
 <div class="thumbnail card-2">
   <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
-  <img src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path">
+  <img src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path&&!movie.imageUrl">
+   <img src="{{movie.imageUrl}}" *ngIf="movie.imageUrl">
   <div class="caption">
     <h3 class="text-ellipsis" >
       <a routerLink="/movie/{{movie.id}}" title="{{movie.title}}">{{movie.title}}</a>
@@ -14,8 +15,9 @@
         <i class="glyphicon glyphicon-star"></i>
         
       </small>
-      <i class="fa fa-thumbs-o-up"></i>1456
-      <i class="fa fa-commenting"></i>32
+      <i class="fa fa-heart ion"></i><span class='data'>{{movie.like}}</span>
+      <i class="fa fa-commenting ion"></i><span class='data'>{{movie.comment}}</span>
+      <i class="fa fa-share-alt ion"></i>
     </p>
   </div>
 </div>

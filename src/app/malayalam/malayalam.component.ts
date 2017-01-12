@@ -12,8 +12,8 @@ export class MalayalamComponent implements OnInit {
   constructor(public moviservice:MoviesService) { }
 
   ngOnInit() {
-    this.moviservice.getUpComingMovies().subscribe(res=>{
-      this.movies=res.results;     
+    this.moviservice.getMovies("mlupcoming").subscribe(res=>{
+      this.movies=res;     
     })
   }
 
