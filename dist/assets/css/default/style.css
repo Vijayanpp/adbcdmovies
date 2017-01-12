@@ -6499,3 +6499,52 @@ a:hover
 {
   text-decoration: none;
 }
+
+.ion
+{
+  background: #eee;
+  border-radius:50%;
+  padding:10px;
+  transition: all 0.7s ease-in-out;
+  cursor:pointer;
+}
+.ion:hover
+{
+  background: #fff;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.red
+{
+  background:#fd0000;
+  color:#fff;
+}
+.data
+{
+  font-size:11px;
+  margin-right: 10px;
+  padding:10px;
+
+}
+
+.pp li a
+{
+  color:#fff!important;
+}
+
+.ppp a
+{
+  cursor: pointer;
+    padding: 0 12px 0 20px;
+    color: rgba(0,0,0,0.87);
+    font-size: 16px;   
+    font-weight: 500;
+    opacity: .85;
+    line-height: 15px;
+}
+.ppp i
+{
+  margin-right:10px;
+  background:#eee;
+  /*border-radius:50%;
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);*/
+}

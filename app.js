@@ -27,67 +27,11 @@ app.get('/', function(request, response) {
 
 
 
-app.get('/mainnews', function(request, response) {
+app.get('/mlupcoming', function(request, response) {
  jsonfile.readFile(entjson, function(err, obj) {
  response.send(obj)
  })
  })
-
-// app.get('/entertainment', function(request, response) {
-//  jsonfile.readFile(entjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/news', function(request, response) {
-//  jsonfile.readFile(newsjson, function(err, obj) {
-//    console.log(obj);
-//   response.send(obj)
-// })
-// })
-
-// app.get('/fashion', function(request, response) {
-//  jsonfile.readFile(fashionjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/business', function(request, response) {
-//  jsonfile.readFile(businessjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/hotoffer', function(request, response) {
-//  jsonfile.readFile(hotofferjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/movies', function(request, response) {
-//  jsonfile.readFile(moviejson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/quotes', function(request, response) {
-//  jsonfile.readFile(quotesjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/technology', function(request, response) {
-//  jsonfile.readFile(technologyjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
-// app.get('/busines', function(request, response) {
-//  jsonfile.readFile(businessjson, function(err, obj) {
-//   response.send(obj)
-// })
-// })
-
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

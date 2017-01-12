@@ -10,10 +10,15 @@ export class UpcomingComponent implements OnInit {
   movies: Array<Object>;
   searchRes: Array<Object>;
   searchStr: string;
-
+  genres: Array<Object>;
   constructor(private _moviesService: MoviesService) {
     this._moviesService.getUpComingMovies().subscribe(res => {
       this.movies = res.results;
+    });
+
+
+    this._moviesService.getGenres().subscribe(res => {
+      this.genres = res.genres.slice(0, 20);
     });
   }
 

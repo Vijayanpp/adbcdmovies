@@ -12,6 +12,7 @@ export class MoviesComponent implements OnInit {
   topRatedList: Array<Object>;
   searchRes: Array<Object>;
   searchStr: string;
+  genres: Array<Object>;
   constructor(private _moviesService: MoviesService) {
     this._moviesService.getPopular().subscribe(res => {
       this.popularList = res.results;
@@ -21,6 +22,9 @@ export class MoviesComponent implements OnInit {
     });
     this._moviesService.getTopRatedMovies().subscribe(res => {
       this.topRatedList = res.results;
+    });
+     this._moviesService.getGenres().subscribe(res => {
+      this.genres = res.genres.slice(0, 20);
     });
   }
 

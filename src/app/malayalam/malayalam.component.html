@@ -1,8 +1,36 @@
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".movies-cat">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse movies-cat">
+          <div class="panel-heading"></div>
+          <ul class="nav nav-stacked ppp">
+            <li><a href='#'><i class="fa fa-hourglass ion"></i>Upcoming</a></li>
+            <li><a href='#'><i class="fa fa-eye ion"></i>Running</a></li>
+            <li><a href='#'><i class="fa fa-flash ion"></i>Trailers</a></li>
+            <li><a href='#'><i class="fa fa-star-half-o ion"></i>Reviews</a></li>
+            <li><a href='#'><i class="fa fa-music ion"></i>Music</a></li>
+            <li><a href='#'><i class="fa fa-film ion"></i>Gallery</a></li>
+
+          </ul>
+        </div>
+      
+      </nav>
+    </div>
+
+   
+<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
 <div *ngIf="movies">
   <h3 class="orange-text">{{title}}</h3>
   <div class="row is-flex">
-    <div class="col-sm-6 col-md-4 col-lg-3 col-xs-6" *ngFor="let movie of movies; let i = index;">
+    <div class="col-sm-12 col-md-4 col-lg-3 col-xs-12" *ngFor="let movie of movies; let i = index;">
       <movie-card [movie]="movie"></movie-card>
     </div>
   </div>
+</div>
 </div>

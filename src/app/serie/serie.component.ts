@@ -12,11 +12,17 @@ import {MoviesService} from '../movies.service';
 export class SerieComponent implements OnInit {
   serie: Object;
   video: Object;
+  genres: Array<Object>;
+
   constructor(
     private _moviesServices: MoviesService,
     private router: ActivatedRoute,
     private sanitizer: DomSanitizer
     ) {
+
+      this._moviesServices.getGenres().subscribe(res => {
+      this.genres = res.genres.slice(0, 20);
+    });
 
   }
 

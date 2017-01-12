@@ -8,10 +8,15 @@ import {MoviesService} from '../movies.service';
 })
 export class PopularSeriesComponent implements OnInit {
   series: Array<Object>;
+  genres: Array<Object>;
 
   constructor(private _moviesService: MoviesService) {
     this._moviesService.getPopularSeries().subscribe(res => {
       this.series = res.results;
+    });
+
+    this._moviesService.getGenres().subscribe(res => {
+      this.genres = res.genres.slice(0, 20);
     });
   }
 

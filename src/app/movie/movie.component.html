@@ -1,11 +1,18 @@
+<div class='ppSide card-4 col-xs-12 col-sm-12 col-md-3'>
+   <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" *ngIf='movie' class="thumbnail">
+</div>
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 display">
+     
+</div>
+<div class="col-xs-12 col-sm-8 col-md-9 col-lg-8">
 <div class="row" *ngIf="movie">
-  <div class="col-md-3 col-sm-4 col-lg-3">
-    <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="" class="thumbnail card-2">
+  <!--<div class="col-md-3 col-sm-4 col-lg-3">
+   
     <p>
       <a *ngIf="movie.homepage" href="{{movie.homepage}}" target="_blank">Visit Movies Website</a>
     </p>
-  </div>
-  <div class="col-md-8">
+  </div>-->
+  <div class="col-md-8 col-sm-12 col-xs-12 card-1">
     <h2>{{movie.title}}
       <small class="label label-warning">
         {{movie.vote_average}}
@@ -19,24 +26,18 @@
       </a>
     </p>
     <h3>Overview</h3>
-    <p>{{movie.overview}}
+    <p>{{movie.overview}}</p>
    <div  *ngFor="let review of reviews">   
       <p class="text-justify">{{review.content}}</p>
       <footer><cite title="{{review.author}}"><a href="{{review.url}}" target="_blank">{{review.author}}</a></cite></footer>  
-  </div>
-
+  </div>  
     
   </div>
-</div>
-<!--Trailer-->
-<div class='gap'>
-</div>
-
-<div class="row is-flex" *ngIf="cast && cast.length > 0">
+  <div class='col-md-4 col-sm-12 col-xs-12' *ngIf="cast && cast.length > 0">
       <div class="col-md-12">
         <h3 class="text-center">Cast</h3>
       </div>
-      <div class="col-md-3 card-2" *ngFor="let actor of cast">
+      <div class="col-md-6 col-sm-6 col-xs-12" *ngFor="let actor of cast">
         <div class="thumbnail">
           <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" alt="">
           <div class="caption">
@@ -45,6 +46,10 @@
         </div >
       </div>
     </div>
+
+</div>
+<!--Trailer-->
+
 
     <div class="gap">
     </div>
@@ -66,9 +71,11 @@
   <div class="col-md-12">
     <h2>Similar Movies</h2>
   </div>
-  <div class="col-md-2" *ngFor="let movie of similarMovies">
+  <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4" *ngFor="let movie of similarMovies">
     <movie-card [movie]="movie"></movie-card>
   </div>
 </div>
 <!--Similar Movies-->
+
+</div>
 
