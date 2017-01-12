@@ -4,14 +4,8 @@ var request = require('request');
 var shuffles=require('./provider/shuffleprovider.js');
 var obj;
  
-var newssites=['https://newsapi.org/v1/articles?source=the-lad-bible&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=mashable&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=daily-mail&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=buzzfeed&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e',
-'https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=3e22f2fcc1344975ae2b2e69379e2a6e'
-]
+var newssites=['http://localhost:3000/malayalam','http://localhost:3000/malayalam'];
+
 
 var data=[];
 var articles=[];
@@ -24,20 +18,15 @@ request(url, function (error, response, body) {
     data.push(JSON.parse(body));
 
    for(let i=0;i<data.length;i++)
-     {
-       data[i].articles.forEach(function(array)
-       {
-            array.source=data[i].source
-       }
-       )
-
-     articles=articles.concat(data[i].articles);
+     {       
+     articles.push(data[i]);
      }
 
-     articles=shuffles.doShuffle(articles);
+    // articles=shuffles.doShuffle(articles);
 
   jsonfile.writeFile(file,articles, function (err) {
   console.error(err)
+  console.log('hi')
    })
   }
 })
