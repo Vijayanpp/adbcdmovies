@@ -17,7 +17,11 @@ var entertainment=require('./server/ent.js');
 // var moviejson='./server/json/movie.json'
 // var quotesjson='./server/json/quotes.json'
 // var technologyjson='./server/json/technology.json'
+var requested = require('request');
 var app = express();
+var url="https://vijayanpp.github.io/moviedatabase/"
+var articles=[];
+var data=[];
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/dist'));
 
@@ -32,6 +36,57 @@ app.get('/mlupcoming', function(request, response) {
  response.send(obj)
  })
  })
+
+app.get('/kupcoming', function(req, res) {
+
+requested(url+"k/upcoming.json", function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+   data=JSON.parse(body);
+   articles=data;  
+   res.send(articles);
+  }
+})
+
+ })
+
+app.get('/bupcoming', function(req, res) {
+
+requested(url+"b/upcoming.json", function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+   data=JSON.parse(body);
+   articles=data;  
+   res.send(articles);
+  }
+})
+
+ })
+
+app.get('/hupcoming', function(req, res) {
+
+requested(url+"h/upcoming.json", function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+   data=JSON.parse(body);
+   articles=data;  
+   res.send(articles);
+  }
+})
+
+ })
+
+app.get('/moviedetail/:id', function(req, res) {
+
+
+requested(url+"Malayalam/"+req.params.id+"/"+"data.json", function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+   data=JSON.parse(body);
+   articles=data;
+   console.log('kkk')
+   res.send(articles);
+  }
+})});
+
+
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

@@ -143,8 +143,8 @@ This files contents are outlined below.
   .header1 .navbar .rightSide_nav .navbar-toggle:hover,
   .header1 .navbar .rightSide_nav .navbar-toggle:focus,
   .header1 .navbar .rightSide_nav .navbar-toggle[aria-expanded="true"] {
-    border-color: transparent;
-    background: none;
+    border-color:#222;;
+    background:#222;
   }
   .header1 .navbar .rightSide_nav .navbar-toggle:hover span,
   .header1 .navbar .rightSide_nav .navbar-toggle:focus span,
@@ -152,12 +152,17 @@ This files contents are outlined below.
     background: #fff;
   }
   .header1 .navbar .rightSide_nav #top_nav {
-    top: 66px;
+        top: 66px;
     border: none;
     box-shadow: none;
     position: absolute;
-    width: 100%;
-    background: #13141b;
+    /* width: 100%; */
+    background: #ffffff;
+    height: auto;
+    max-height: 500px;
+    right: 0px;
+    width: auto;
+    min-width: 300px;
   }
   .header1 .navbar .rightSide_nav #top_nav .nav li a {
     padding: 0 15px;

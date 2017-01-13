@@ -1,0 +1,18 @@
+
+
+
+<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12 border white">
+ <img src="{{movie.imageUrl}}" alt="" *ngIf='movie' class="thumbnail card-4">
+</div>
+<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12" >
+     <div class="row">
+  <div class="col-md-12"> 
+  </div>
+ </div>
+</div>
+
+
+<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12 border white pull-left" *ngIf="movie">
+ <h1>{{movie.title}}</h1>
+ <p>{{movie.review}}</p>
+</div>

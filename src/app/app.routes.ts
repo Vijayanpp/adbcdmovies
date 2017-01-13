@@ -10,7 +10,8 @@ import { MalayalamComponent } from './malayalam/malayalam.component';
 import { BollywoodComponent } from './bollywood/bollywood.component';
 import { TollywoodComponent } from './tollywood/tollywood.component';
 import { KollywoodComponent } from './kollywood/kollywood.component';
-
+import { HollywoodComponent } from './hollywood/hollywood.component';
+import {MoviedetailComponent } from './moviedetail/moviedetail.component'
 export const appRoutes: Routes = [
     {path: '', component: MoviesComponent},
     {path: 'movie/:id', component: MovieComponent},
@@ -23,4 +24,6 @@ export const appRoutes: Routes = [
     {path: 'bollywood', component:  BollywoodComponent},
     {path: 'tollywood', component:  TollywoodComponent},
     {path: 'kollywood', component:  KollywoodComponent},
+    {path: 'hollywood', component:  HollywoodComponent},
+    {path: 'moviedetail/:id', component: MoviedetailComponent }
 ];

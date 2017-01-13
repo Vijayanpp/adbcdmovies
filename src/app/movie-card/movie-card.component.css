@@ -25,9 +25,19 @@ a:hover
 	  border: 1px solid #ddd;
     padding:20px;
 }
-.thumnail img
+@media(min-width:900px) 
 {
-    min-height:127px;
+img.respo
+{
+    height:140px;
+}
+}
+@media(min-width:1220px)
+{
+img.respo
+{
+    height:200px;
+}
 }
 
 .card-4 {
@@ -53,3 +63,4 @@ a:hover
     padding: 9px 0;
     color: #333;
 }
+

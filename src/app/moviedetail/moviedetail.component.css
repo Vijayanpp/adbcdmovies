@@ -1,0 +1,15 @@
+.fullGallery
+{
+    width:100%;
+    height:auto;
+    min-height: 200px;
+}
+.white
+{
+    background: #fff;
+    padding-bottom:40px;
+}
+.white img
+{
+    width:100%;
+}

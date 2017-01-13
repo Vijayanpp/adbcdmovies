@@ -18,6 +18,7 @@ import { KollywoodComponent } from './kollywood/kollywood.component';
 import { TollywoodComponent } from './tollywood/tollywood.component';
 import { BollywoodComponent } from './bollywood/bollywood.component';
 import { HollywoodComponent } from './hollywood/hollywood.component';
+import { MoviedetailComponent } from './moviedetail/moviedetail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HollywoodComponent } from './hollywood/hollywood.component';
     KollywoodComponent,
     TollywoodComponent,
     BollywoodComponent,
-    HollywoodComponent
+    HollywoodComponent,
+    MoviedetailComponent
   ],
   imports: [
     BrowserModule,
