@@ -1,18 +1,95 @@
 
+<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 card-4 fixed" >
+   <div class='img-fan'> <img src="{{movie.heroImg}}" alt="" *ngIf='movie'></div>
+   <i class="fa fa-heart dev"></i><span class='data'></span> 
+   <i class="fa fa-commenting dev "></i><span class='data'></span> 
+   <i class="fa fa-share-alt dev "></i>
+   </div>
+<div class="col-md-2 col-lg-2 col-sm-12 col-xs-12  pull-right">
 
+</div>
 
-<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12 border white">
+<div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 white pull-right">
  <img src="{{movie.imageUrl}}" alt="" *ngIf='movie' class="thumbnail card-4">
 </div>
-<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12" >
-     <div class="row">
-  <div class="col-md-12"> 
-  </div>
- </div>
-</div>
 
 
-<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12 border white pull-left" *ngIf="movie">
+<div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 col-md-offset-3 col-lg-offset-3" *ngIf="movie">
  <h1>{{movie.title}}</h1>
- <p>{{movie.review}}</p>
+ <p [innerHTML]="movie.review"></p>
 </div>
+
+
+
+
+
+
+
+<div class="col-md-7 col-lg-7 col-sm-7 col-xs-7 col-md-offset-3 col-lg-offset-3" *ngIf="movie">
+    <div class='container'>
+        <h1>Cast and Crew</h1>
+        <div class="row">
+     
+
+         <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer">
+        <img src="{{movie.heroImg}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{movie.hero}}</span>
+        </div>
+        
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer">
+         <img src="{{movie.heroineImg}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{movie.heroine}}</span>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer" *ngFor="let dir of movie.director">
+           <img src="{{dir.img}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{dir.name}}</span>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer" *ngFor="let dir of movie.music">
+         <img src="{{dir.img}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{dir.name}}</span>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer" *ngFor="let dir of movie.Screenplay">
+         <img src="{{dir.img}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{dir.name}}</span>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer" *ngFor="let dir of movie.producer">
+         <img src="{{dir.img}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{dir.name}}</span>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 imgContainer" >
+        <img src="{{movie.camImg}}" alt="" *ngIf='movie'>
+         <span class='tit'>{{movie.camera}}</span>
+        </div>        
+         </div>
+    </div>
+ </div>
+
+
+ <div class="col-md-7 col-lg-7 col-sm-7 col-xs-7 col-md-offset-3 col-lg-offset-3" *ngIf="movie">
+    <div class='container'>
+        <h1>Videos</h1>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" *ngFor="let vid of movie.videos">
+            <div  class=" border" innerHTML="<p>kdfdjfdjf</p>">          
+             
+            </div>
+            <span innerHTML="vid.url"></span>
+            
+</div>
+
+            
+
+           
+        </div>
+    </div>
+ </div>
+
+
+ 
+
+
