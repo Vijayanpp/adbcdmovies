@@ -9,6 +9,8 @@ import {MoviesService} from '../movies.service';
 })
 export class MoviedetailComponent implements OnInit {
   public movie:Object;
+  public trailers=[];
+  public musicvideos=[];
   constructor(public moviservice:MoviesService,private router: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
@@ -17,6 +19,19 @@ export class MoviedetailComponent implements OnInit {
       const id = params['id'];
       this.moviservice.getMovies("moviedetail/"+id).subscribe(movie => {
         this.movie = movie;
+        for(let i=0;i<movie.trailors.length;i++)
+        {
+          var url=this.sanitizer.bypassSecurityTrustHtml(movie.trailors[i].url)
+          this.trailers.push(url)
+
+        }
+
+        for(let i=0;i<movie.musicvideos.length;i++)
+        {
+          var url=this.sanitizer.bypassSecurityTrustHtml(movie.musicvideos[i].url)
+          this.musicvideos.push(url)
+
+        }
       });
 
 

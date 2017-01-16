@@ -7,7 +7,14 @@
 .white
 {
   
-    padding-bottom:40px;
+  
+    position:relative;
+    top:-75px;
+}
+.topContent
+{
+    position: relative;
+    top:-50px;
 }
 .white img
 {
